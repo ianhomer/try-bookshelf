@@ -4,7 +4,6 @@ const Group = require('./Group')
 
 console.log("Tying bookshelf")
 
-
 User.forge({'name':'my-name'})
     .save()
     .then(user => {
@@ -16,7 +15,7 @@ User.forge({'name':'my-name'})
                 try {
                     console.log(`Attaching group`)
                     user.groups().attach(group)
-                        .then('Saved relation')
+                        .then(collection => `Saved relation ${collection}`)
                         .catch(err => console.log(err))
                     console.log(`Attached group`)
                 } catch (e) {
@@ -26,6 +25,7 @@ User.forge({'name':'my-name'})
             .catch(err => console.log(err))
     })
     .catch(err => console.log(err))
+
 
 console.log("Finished")
 
