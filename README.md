@@ -10,18 +10,10 @@ Try Bookshelf ORM
     npm install -g knex
     knex migrate:up
     npm start
-    
+
 Log in to DB at http://localhost:8080
-    
-# Enhancing model
 
-Create new model file, then create migration script
+# See ...
 
-    npm install -g knex
-    knex migrate:make create_thing
+[javascript] or [typescript] for notes on specific implementations.
     
-Then enhance migration script to match model
-    
-# Clean up
-
-    docker-compose down --rmi all
