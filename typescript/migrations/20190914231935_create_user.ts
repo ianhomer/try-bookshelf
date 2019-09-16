@@ -1,13 +1,13 @@
 
-exports.up = function(knex) {
+exports.up = knex => {
  return knex.schema
-    .createTable('user', function (table) {
+    .createTable('user', table => {
        table.increments('id')
        table.string('name', 255).notNullable()
     })
 };
 
-exports.down = function(knex) {
+exports.down = knex => {
   return knex.schema
     .dropTable("user")
 };

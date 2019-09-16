@@ -12,6 +12,4 @@ class User extends bookshelf.Model {
     }
 }
 
-//bookshelf.model('User', User)
-
 export default User

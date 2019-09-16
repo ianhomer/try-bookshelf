@@ -5,7 +5,20 @@ import Group from './entity/Group'
 
 const seed = Math.floor(new Date().getTime() / 1000)
 
-User.forge({'name':'my-name=' + seed})
+const name = 'my-name=' + seed
+
+const showData = name => {
+    new User().fetchAll()
+        .then(results => console.log(`User count : ${results.length}`))
+        .catch(err => console.log(err))
+
+    console.log(`Getting user ${name}`)
+    User.forge({'name':name}).fetch()
+        .then(newUser => console.log(`New user ${name}: ${JSON.stringify(newUser)}`))
+        .catch(err => console.log(err))
+}
+
+User.forge({'name':name})
     .save()
     .then(user => {
         Group.forge({'name':'my-group-' + seed})
@@ -18,6 +31,7 @@ User.forge({'name':'my-name=' + seed})
                         .then(collection => `Saved relation ${collection}`)
                         .catch(err => console.log(err))
                     console.log(`Attached group`)
+                    showData(name);
                 } catch (e) {
                     console.log(e)
                 }
