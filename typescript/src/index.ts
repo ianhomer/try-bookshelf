@@ -9,12 +9,19 @@ const name = 'my-name=' + seed
 
 const showData = name => {
     new User().fetchAll()
-        .then(results => console.log(`User count : ${results.length}`))
+        .then(results => {
+            results.forEach(user => {
+                console.log(`User : ${user.name} : ${JSON.stringify(user)}`)
+            })
+        })
         .catch(err => console.log(err))
 
     console.log(`Getting user ${name}`)
     User.forge({'name':name}).fetch()
-        .then(newUser => console.log(`New user ${name}: ${JSON.stringify(newUser)}`))
+        .then(newUser => {
+            console.log(`New user ${name}: ${JSON.stringify(newUser)}`)
+            console.log(`Groups : ${JSON.stringify(newUser.groups())}`)
+        })
         .catch(err => console.log(err))
 }
 

@@ -1,5 +1,4 @@
 import bookshelf from "./../bookshelf";
-
 import Group from './Group'
 
 class User extends bookshelf.Model {
