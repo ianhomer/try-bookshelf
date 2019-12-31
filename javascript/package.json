@@ -6,7 +6,7 @@
   },
   "dependencies": {
     "bookshelf": "^1.0.0",
-    "knex": "^0.19.4",
+    "knex": "^0.19.5",
     "nodemon": "^1.19.2",
     "pg": "^7.12.1"
   }
