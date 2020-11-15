@@ -1,14 +1,14 @@
 import bookshelf from "./../bookshelf";
-import Group from './Group'
+import Group from "./Group";
 
 class User extends bookshelf.Model {
-    get tableName() {
-        return 'user';
-    }
+  get tableName() {
+    return "user";
+  }
 
-    groups() {
-        return this.belongsToMany(Group);
-    }
+  groups() {
+    return this.belongsToMany(Group);
+  }
 }
 
-export default User
+export default User;

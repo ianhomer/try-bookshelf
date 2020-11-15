@@ -1,17 +1,22 @@
 {
   "name": "root",
   "private": true,
-  "devDependencies": {
-    "lerna": "^3.22.1",
-    "minimist": ">=1.2.5"
-  },
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
     "clean": "lerna clean",
+    "format:pkg": "format-package -w",
     "lint": "lerna run lint",
     "lint:fix": "lerna run lint:fix",
+    "prettier": "npx prettier --check .",
+    "prettier:fix": "npx prettier --write .",
     "test": "lerna run test",
     "update": "npx npm-check-updates -u && npx lerna exec -- npx npm-check-updates -u && lerna clean --yes && lerna exec \"npm install --package-lock-only --no-audit\""
+  },
+  "devDependencies": {
+    "format-package": "^6.1.0",
+    "lerna": "^3.22.1",
+    "minimist": ">=1.2.5",
+    "prettier": "^2.1.2"
   }
 }

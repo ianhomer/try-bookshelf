@@ -16,4 +16,3 @@ Log in to DB at http://localhost:8080
 # See ...
 
 [javascript] or [typescript] for notes on specific implementations.
-    

@@ -1,12 +1,12 @@
-const knex = require('knex')({
-  client: 'pg',
+const knex = require("knex")({
+  client: "pg",
   connection: {
-    host     : 'localhost',
-    user     : 'postgres',
-    password : 'password',
-    database : 'postgres',
-    charset  : 'utf8'
+    host: "localhost",
+    user: "postgres",
+    password: "password",
+    database: "postgres",
+    charset: "utf8",
   },
-  debug: true
-})
-module.exports = require('bookshelf')(knex)
+  debug: true,
+});
+module.exports = require("bookshelf")(knex);

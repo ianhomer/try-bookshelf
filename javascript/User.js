@@ -1,10 +1,10 @@
-const bookshelf = require('./bookshelf')
+const bookshelf = require("./bookshelf");
 
-const User = bookshelf.model('User', {
-  tableName: 'user',
+const User = bookshelf.model("User", {
+  tableName: "user",
   groups() {
-    return this.belongsToMany('Group')
-  }
-})
+    return this.belongsToMany("Group");
+  },
+});
 
-module.exports = User
+module.exports = User;
