@@ -6,7 +6,7 @@
     "start": "nodemon -x ts-node src/index.ts"
   },
   "dependencies": {
-    "@types/node": "^14.14.16",
+    "@types/node": "^14.14.19",
     "bookshelf": "^1.2.0",
     "knex": "^0.21.15",
     "nodemon": "^2.0.6",
