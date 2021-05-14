@@ -2,7 +2,7 @@
 
 Try Bookshelf ORM
 
-# tl;dr
+## tl;dr
 
     docker-compose up -d
     cd javascript
@@ -11,8 +11,8 @@ Try Bookshelf ORM
     knex migrate:up
     npm start
 
-Log in to DB at http://localhost:8080
+Log in to DB at <http://localhost:8080>
 
-# See ...
+## More
 
 [javascript] or [typescript] for notes on specific implementations.
