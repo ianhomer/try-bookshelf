@@ -1,9 +1,9 @@
-# try-bookshelf-typescript
+# Try Bookshelf.js with typescript
 
-Try Bookshelf ORM with Typescript
+Try Bookshelf ORM with Typescript.
 
-# tl;dr
+## tl;dr
 
     npm install
-    knex migrate:up
+    npx knex migrate:up
     npm start
