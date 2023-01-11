@@ -8,7 +8,7 @@
   "dependencies": {
     "@types/node": "^15.0.3",
     "bookshelf": "^1.2.0",
-    "knex": "^0.95.5",
+    "knex": "^2.4.0",
     "nodemon": "^2.0.7",
     "pg": "^8.6.0",
     "typescript": "^4.2.4"
